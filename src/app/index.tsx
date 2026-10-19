@@ -1,98 +1,61 @@
-import * as Device from 'expo-device';
-import { Platform, StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { useRouter } from "expo-router"; 
 
-import { AnimatedIcon } from '@/components/animated-icon';
-import { HintRow } from '@/components/hint-row';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { WebBadge } from '@/components/web-badge';
-import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
+export default function Index() {
+  const router = useRouter(); 
 
-function getDevMenuHint() {
-  if (Platform.OS === 'web') {
-    return <ThemedText type="small">use browser devtools</ThemedText>;
-  }
-  if (Device.isDevice) {
-    return (
-      <ThemedText type="small">
-        shake device or press <ThemedText type="code">m</ThemedText> in terminal
-      </ThemedText>
-    );
-  }
-  const shortcut = Platform.OS === 'android' ? 'cmd+m (or ctrl+m)' : 'cmd+d';
   return (
-    <ThemedText type="small">
-      press <ThemedText type="code">{shortcut}</ThemedText>
-    </ThemedText>
+    <View style={styles.container}>
+  
+      <Image
+        style={styles.imgPrincipal}
+        source={{
+          uri: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg97mjSqN7Zombl2vv-EcLKMpjzZ2QWWhRMrLzvBofqXkEHtfFJwJZtIddhfVEaZkoVgZHjs_v1O_1ZejdkNLFKY4RLP1Iz47zrD5avnB5jKkmRSbfraRNJ05dMIYDCQ3hzsMq5plo6-bI1/s1600/atualizacao-2017-03-31.jpg",
+        }}
+      />
+      <View>
+        <Text style={styles.titulo}>SENAIFLIX</Text>
+        <Text style={styles.descricao}>
+          Filmes e séries ilimitados. Assista onde quiser.
+        </Text>
+        <TouchableOpacity
+          style={styles.btnEntrar}
+          onPress={() => router.push("/catalogo")}>
+          <Text style={styles.btnTexto}>Entrar</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
 }
-
-export default function HomeScreen() {
-  return (
-    <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
-        <ThemedView style={styles.heroSection}>
-          <AnimatedIcon />
-          <ThemedText type="title" style={styles.title}>
-            Welcome to&nbsp;Expo
-          </ThemedText>
-        </ThemedView>
-
-        <ThemedText type="code" style={styles.code}>
-          get started
-        </ThemedText>
-
-        <ThemedView type="backgroundElement" style={styles.stepContainer}>
-          <HintRow
-            title="Try editing"
-            hint={<ThemedText type="code">src/app/index.tsx</ThemedText>}
-          />
-          <HintRow title="Dev tools" hint={getDevMenuHint()} />
-          <HintRow
-            title="Fresh start"
-            hint={<ThemedText type="code">npm run reset-project</ThemedText>}
-          />
-        </ThemedView>
-
-        {Platform.OS === 'web' && <WebBadge />}
-      </SafeAreaView>
-    </ThemedView>
-  );
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    flexDirection: 'row',
+    backgroundColor: "#f1eeee",
+    margin: 10
   },
-  safeArea: {
-    flex: 1,
-    paddingHorizontal: Spacing.four,
-    alignItems: 'center',
-    gap: Spacing.three,
-    paddingBottom: BottomTabInset + Spacing.three,
-    maxWidth: MaxContentWidth,
+  imgPrincipal: {
+    width: "100%",
+    height: "70%",
   },
-  heroSection: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1,
-    paddingHorizontal: Spacing.four,
-    gap: Spacing.four,
+  titulo: {
+    color: "red",
+    fontSize: 40,
+    fontWeight: "bold",
+    marginTop: 17,
   },
-  title: {
-    textAlign: 'center',
+  descricao: {
+    fontSize: 16,
+    color: "#535252",
+    marginBottom: 17,
   },
-  code: {
-    textTransform: 'uppercase',
+  btnEntrar: {
+    backgroundColor: "red",
+    padding: 15,
+    alignItems: "center",
   },
-  stepContainer: {
-    gap: Spacing.three,
-    alignSelf: 'stretch',
-    paddingHorizontal: Spacing.three,
-    paddingVertical: Spacing.four,
-    borderRadius: Spacing.four,
+  btnTexto: {
+    fontSize: 20,
+    color: "#fff",
+    fontWeight: "bold",
   },
 });

@@ -1,56 +1,79 @@
-# Welcome to your Expo app 👋
+# Senaiflix 🎬
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicação *mobile* desenvolvida em **React Native** com **Expo Router** e **TanStack Query** para navegação e exibição de um catálogo completo de filmes.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Funcionalidades
 
-   ```bash
-   npm install
-   ```
+* **Tela Inicial (Home):** Apresentação do aplicativo com atalho para o catálogo.
+* **Catálogo de Filmes:** Lista interativa com capas, títulos, ano, duração e gêneros.
+* **Detalhes do Filme:** Visualização completa contendo banner, classificação indicativa, sinopse detalhada e botões de ação.
+* **Consumo de API Mock:** Integração com backend simulado usando `json-server`.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🛠️ Tecnologias Utilizadas
 
-In the output, you'll find options to open the app in a
+* **[React Native](https://reactnative.dev/):** Framework para desenvolvimento mobile.
+* **[Expo Router](https://docs.expo.dev/router/introduction/):** Roteamento baseado em arquivos para React Native.
+* **[TanStack Query (React Query)](https://tanstack.com/query/latest):** Gerenciamento de estado assíncrono e requisições HTTP.
+* **[TypeScript](https://www.typescriptlang.org/):** Tipagem estática para maior segurança no código.
+* **[JSON Server](https://github.com/typicode/json-server):** API REST simulada a partir de um arquivo `db.json`.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📁 Estrutura do Projeto
 
-## Get a fresh project
+```text
+src/
+├── api/
+│   ├── get-filme.ts      # Requisição dos detalhes por ID
+│   └── get-filmes.ts     # Requisição da lista de filmes
+└── app/
+    ├── _layout.tsx       # Layout global e Providers (React Query / Header)
+    ├── index.tsx         # Tela Inicial
+    └── catalogo/
+        ├── index.tsx     # Tela do Catálogo (Lista)
+        └── [id].tsx      # Tela de Detalhes do Filme
+db.json                   # Banco de dados local simulado
 
-When you're ready, run:
-
-```bash
-npm run reset-project
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+---
 
-### Other setup steps
+## 🔧 Como Executar o Projeto
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+### Pré-requisitos
 
-## Learn more
+* **Node.js** instalado na máquina.
+* Aplicativo **Expo Go** instalado no telemóvel/celular (caso queira testar num dispositivo real).
 
-To learn more about developing your project with Expo, look at the following resources:
+### Passo a Passo
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1. **Instalar as dependências:**
+```bash
+npm install
 
-## Join the community
+```
 
-Join our community of developers creating universal apps.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+2. **Iniciar o Backend Simulado (JSON Server):**
+Em um terminal separado na raiz do projeto, execute:
+```bash
+npx json-server --watch db.json --port 3000
+
+```
+
+
+3. **Iniciar a Aplicação Mobile (Expo):**
+Em outro terminal, inicie o servidor do Metro:
+```bash
+npx expo start -c
+
+```
+
+
+4. **Acessar o App:**
+* Pressione **`w`** no terminal para abrir no navegador Web.
+* Ou leia o **QR Code** com a câmara do telemóvel através do aplicativo **Expo Go**.

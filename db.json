@@ -1,0 +1,92 @@
+{
+  "filmes": [
+    {
+      "id": 1,
+      "nome": "O Poderoso Chefão",
+      "ano": 1972,
+      "duracao": "2h 55min",
+      "classificacao": "14",
+      "genero": "Drama",
+      "poster": "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/90/93/20/20120876.jpg",
+      "capa": "https://fbi.cults3d.com/uploaders/34614944/illustration-file/970dafa2-ef44-4195-91d7-d0e442f3e6a9/6e735d75e9147233c72226af48fb1cf2c0fe1918275b863a3e9800e09e7e2c43.jpg",
+      "sinopse": "O patriarca idoso de uma dinastia do crime organizado transfere o controle de seu império clandestino para seu filho relutante."
+    },
+    {
+      "id": 2,
+      "nome": "Batman: O Cavaleiro das Trevas",
+      "ano": 2008,
+      "duracao": "2h 32min",
+      "classificacao": "12",
+      "genero": "Ação",
+      "poster": "https://m.media-amazon.com/images/I/91KkWfLNwtL._AC_SL1500_.jpg",
+      "capa": "https://m.media-amazon.com/images/I/91KkWfLNwtL._AC_SL1500_.jpg",
+      "sinopse": "Quando a ameaça conhecida como Coringa surge de seu passado, ele causa estragos e caos nas pessoas de Gotham."
+    },
+    {
+      "id": 3,
+      "nome": "Interstellar",
+      "ano": 2014,
+      "duracao": "2h 49min",
+      "classificacao": "10",
+      "genero": "Ficção Científica",
+      "poster": "https://m.media-amazon.com/images/I/91kFYg4fX3L._AC_SL1500_.jpg",
+      "capa": "https://m.media-amazon.com/images/I/91kFYg4fX3L._AC_SL1500_.jpg",
+      "sinopse": "Uma equipe de exploradores viaja através de um buraco de minhoca no espaço, na tentativa de garantir a sobrevivência da humanidade."
+    },
+    {
+      "id": 4,
+      "nome": "Matrix",
+      "ano": 1999,
+      "duracao": "2h 16min",
+      "classificacao": "14",
+      "genero": "Ficção Científica",
+      "poster": "https://m.media-amazon.com/images/I/51EG732BV3L._AC_.jpg",
+      "capa": "https://m.media-amazon.com/images/I/51EG732BV3L._AC_.jpg",
+      "sinopse": "Um jovem programador é atormentado por estranhos pesadelos e descobre que a realidade em que vive é uma simulação criada por máquinas."
+    },
+    {
+      "id": 5,
+      "nome": "Vingadores: Ultimato",
+      "ano": 2019,
+      "duracao": "3h 01min",
+      "classificacao": "12",
+      "genero": "Ação",
+      "poster": "https://m.media-amazon.com/images/I/81ai6zx6eXL._AC_SL1500_.jpg",
+      "capa": "https://m.media-amazon.com/images/I/81ai6zx6eXL._AC_SL1500_.jpg",
+      "sinopse": "Após os eventos devastadores de Guerra Infinita, os Vingadores restantes unem-se para desfazer as ações de Thanos."
+    },
+    {
+      "id": 6,
+      "nome": "A Origem",
+      "ano": 2010,
+      "duracao": "2h 28min",
+      "classificacao": "14",
+      "genero": "Ação",
+      "poster": "https://m.media-amazon.com/images/I/912AErFSBHL._AC_SL1500_.jpg",
+      "capa": "https://m.media-amazon.com/images/I/912AErFSBHL._AC_SL1500_.jpg",
+      "sinopse": "Um ladrão que rouba segredos corporativos através do uso da tecnologia de compartilhamento de sonhos tem a tarefa inversa de plantar uma ideia na mente de um CEO."
+    },
+    {
+      "id": 7,
+      "nome": "Pulp Fiction",
+      "ano": 1994,
+      "duracao": "2h 34min",
+      "classificacao": "18",
+      "genero": "Crime",
+      "poster": "https://m.media-amazon.com/images/I/71c05lTE03L._AC_SL1024_.jpg",
+      "capa": "https://m.media-amazon.com/images/I/71c05lTE03L._AC_SL1024_.jpg",
+      "sinopse": "As vidas de dois assassinos da máfia, um boxeur, a mulher de um gangster e um par de assaltantes interligam-se em quatro histórias de violência e redenção."
+    },
+    {
+      "id": 8,
+      "nome": "Homem-Aranha: Sem Volta Para Casa",
+      "ano": 2021,
+      "duracao": "2h 28min",
+      "classificacao": "12",
+      "genero": "Ação",
+      "poster": "https://m.media-amazon.com/images/I/81051v2R2-L._AC_SL1500_.jpg",
+      "capa": "https://m.media-amazon.com/images/I/81051v2R2-L._AC_SL1500_.jpg",
+      "sinopse": "Com a identidade do Homem-Aranha revelada, Peter pede ajuda ao Doutor Estranho. Quando um feitiço corre mal, inimigos perigosos de outros mundos começam a aparecer."
+    }
+  ]
+}
